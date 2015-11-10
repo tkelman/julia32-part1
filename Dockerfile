@@ -1,7 +1,7 @@
-FROM tkelman/julia64-part2:master
+FROM tkelman/julia64-part2:release-0.4
 MAINTAINER Tony Kelman <tony@kelman.net>
 
-RUN git clone https://github.com/JuliaLang/julia /home/julia-i686 && \
+RUN git clone -b release-0.4 https://github.com/JuliaLang/julia /home/julia-i686 && \
     cd /home/julia-i686 && \
     echo 'override ARCH = i686' >> Make.user && \
     echo 'override MARCH = pentium4' >> Make.user && \
