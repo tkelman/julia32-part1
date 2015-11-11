@@ -5,7 +5,7 @@ RUN git clone https://github.com/JuliaLang/julia /home/julia-i686 && \
     cd /home/julia-i686 && \
     echo 'override ARCH = i686' >> Make.user && \
     echo 'override MARCH = pentium4' >> Make.user && \
-    DEPS="openblas arpack suitesparse pcre gmp mpfr" && \
+    DEPS="openblas arpack suitesparse pcre gmp mpfr libgit2" && \
     INSTALL="" && DISTCLEAN="" && \
     for dep in $DEPS; do \
       INSTALL="$INSTALL install-$dep" && \
